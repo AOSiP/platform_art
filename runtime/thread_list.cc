@@ -1174,7 +1174,7 @@ void ThreadList::SuspendAllDaemonThreadsForShutdown() {
   }
   // Give the threads a chance to suspend, complaining if they're slow.
   bool have_complained = false;
-  static constexpr size_t kTimeoutMicroseconds = 2000 * 1000;
+  static constexpr size_t kTimeoutMicroseconds = 200 * 1000;
   static constexpr size_t kSleepMicroseconds = 1000;
   for (size_t i = 0; i < kTimeoutMicroseconds / kSleepMicroseconds; ++i) {
     bool all_suspended = true;
