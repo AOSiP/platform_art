@@ -289,6 +289,8 @@ $$(ENUM_OPERATOR_OUT_GEN): $$(GENERATED_SRC_DIR)/%_operator_out.cc : $(LOCAL_PAT
 
   LOCAL_NATIVE_COVERAGE := $(ART_COVERAGE)
 
+ LOCAL_CFLAGS += -O3
+
   ifeq ($$(art_target_or_host),target)
     # For atrace.
     LOCAL_SHARED_LIBRARIES += libcutils
